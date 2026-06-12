@@ -1,0 +1,34 @@
+==================================================
+Linux System Health Report
+==================================================
+
+Timestamp : 2026-06-12 06:18:35
+Hostname  : instance-20260409-0812
+
+OVERALL STATUS : HEALTHY
+
+CPU Usage    : 0.0% (OK)
+Memory Usage : 50.3% (OK)
+Disk Usage   : 14.3% (OK)
+
+System Uptime:
+62 days, 18 hours, 0 minutes
+
+Load Average:
+1 min  : 0.00
+5 min  : 0.00
+15 min : 0.00
+
+Total Processes:
+125
+
+Top CPU Process:
+kworker/u4:1-events_power_efficient (PID: 586822)
+CPU Usage: 10.00%
+
+Top Memory Process:
+systemd-journald (PID: 551537)
+Memory Usage: 5.25%
+
+==================================================
+
