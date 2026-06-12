@@ -1,27 +1,52 @@
-# Project 01 — Linux System Monitor
+# Linux System Health Monitoring Tool
 
-## Problem
-No visibility into the health of a running Ubuntu server without manually
-running individual commands. Needed a single script to collect and report
-system state automatically.
+## Overview
 
-## Environment
-- Oracle Cloud Free Tier (VM.Standard.E2.1.Micro)
-- Ubuntu 22.04 LTS
-- Python 3.10
+A Python-based Linux monitoring tool developed on Oracle Cloud Infrastructure (OCI) using Ubuntu 22.04 LTS. The tool collects key system health metrics and generates timestamped reports for monitoring and troubleshooting purposes.
 
-## What I built
-A Python script (`monitor.py`) that collects:
-- CPU and memory usage
-- Disk utilization
-- Active network connections (via `ss`)
-- Running systemd services
-- Last 5 login attempts
+## Features
 
-Output is written to a timestamped report file under `sample-output/`.
+* CPU Usage Monitoring
+* Memory Usage Monitoring
+* Disk Usage Monitoring
+* System Uptime Tracking
+* Health Status Classification (OK / WARNING / CRITICAL)
+* Process Count Monitoring
+* Top CPU Process Identification
+* Top Memory Process Identification
+* Linux Load Average Monitoring
+* Timestamped Report Generation
 
-## Status
-🔧 In progress
+## Technologies Used
 
-## Skills demonstrated
-`Python` `Linux CLI` `systemd` `ss` `ps` `cron` `log reading`
+* Python 3
+* psutil
+* Linux (Ubuntu 22.04)
+* Oracle Cloud Infrastructure (OCI)
+* Git & GitHub
+
+## Sample Output
+
+See:
+
+sample-output/report_sample.txt
+
+## How to Run
+
+```bash
+python3 monitor.py
+```
+
+## Example Use Cases
+
+* Basic Linux System Monitoring
+* Infrastructure Health Checks
+* Troubleshooting Resource Utilization
+* Learning Linux Administration Concepts
+
+## Future Enhancements
+
+* Service Health Monitoring
+* Email Alerting
+* Dashboard Visualization
+* Scheduled Report Generation

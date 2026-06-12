@@ -21,6 +21,7 @@ def get_overall_status(statuses):
     else:
         return "HEALTHY"
 
+load1, load5, load15 = os.getloadavg()
 
 # Timestamp and Hostname
 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -42,6 +43,36 @@ hours, remainder = divmod(uptime.seconds, 3600)
 minutes, _ = divmod(remainder, 60)
 
 uptime_string = f"{days} days, {hours} hours, {minutes} minutes"
+
+# Process Monitoring
+
+process_count = len(psutil.pids())
+
+top_cpu_process = None
+top_memory_process = None
+
+processes = []
+
+for proc in psutil.process_iter(['pid', 'name']):
+    try:
+        cpu = proc.cpu_percent(interval=0.1)
+        memory = proc.memory_percent()
+
+        processes.append({
+            'pid': proc.info['pid'],
+            'name': proc.info['name'],
+            'cpu': cpu,
+            'memory': memory
+        })
+
+    except (psutil.NoSuchProcess,
+            psutil.AccessDenied,
+            psutil.ZombieProcess):
+        pass
+
+if processes:
+    top_cpu_process = max(processes, key=lambda p: p['cpu'])
+    top_memory_process = max(processes, key=lambda p: p['memory'])
 
 # Status Classification
 cpu_status = get_status(cpu_usage, 70, 90)
@@ -69,6 +100,22 @@ Disk Usage   : {disk_usage}% ({disk_status})
 
 System Uptime:
 {uptime_string}
+
+Load Average:
+1 min  : {load1:.2f}
+5 min  : {load5:.2f}
+15 min : {load15:.2f}
+
+Total Processes:
+{process_count}
+
+Top CPU Process:
+{top_cpu_process['name']} (PID: {top_cpu_process['pid']})
+CPU Usage: {top_cpu_process['cpu']:.2f}%
+
+Top Memory Process:
+{top_memory_process['name']} (PID: {top_memory_process['pid']})
+Memory Usage: {top_memory_process['memory']:.2f}%
 
 ==================================================
 """
