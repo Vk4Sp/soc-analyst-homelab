@@ -21,3 +21,6 @@ Thumbs.db
 
 # Generated monitoring reports
 logs/reports/
+
+# Project-specific generated reports
+projects/01-linux-system-monitor/logs/
