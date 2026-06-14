@@ -74,6 +74,26 @@ Investigated Docker services, images, and containers to determine whether they w
 * Security Hardening
 * Cloud Infrastructure Operations
 
+## Results
+
+The hardening audit identified legacy services and firewall rules from a previous RustDesk deployment.
+
+Actions taken:
+
+- Disabled Docker service
+- Disabled RPCBind service
+- Disabled iSCSI service
+- Disabled Multipath service
+- Removed obsolete firewall rules
+- Verified SSH key-based authentication
+
+Outcome:
+
+- Reduced attack surface
+- Reduced unnecessary startup services
+- Improved firewall posture
+- Maintained secure remote administration through SSH keys
+
 ## Future Improvements
 
 * Remove unused packages after validation
