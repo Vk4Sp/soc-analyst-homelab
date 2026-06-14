@@ -1,42 +1,66 @@
-# soc-analyst-homelab
+# SOC Analyst & DevOps Homelab
 
-Hands-on homelab built on Oracle Cloud Free Tier (Ubuntu 22.04).
-Documents my learning path toward Cloud Support, Infrastructure Support,
-and Security Operations roles.
-
----
+Hands-on homelab built on Oracle Cloud Free Tier (Ubuntu 22.04 LTS). This repository documents my practical learning journey in Linux administration, cloud infrastructure, networking, security auditing, and DevOps fundamentals.
 
 ## Projects
 
-| # | Project | Skills | Status |
-|---|---------|--------|--------|
-| 01 | [Linux System Monitor](./projects/01-linux-system-monitor/) | Python, systemd, ps, ss, cron | completed |
-| 02 | [Oracle Cloud VM Hardening](./projects/02-oracle-cloud-hardening/) | SSH, UFW, port audit, cloud security | completed |
-| 03 | [Network Traffic Analysis](./projects/03-network-traffic-analysis/) | Wireshark, TCP/IP, pcap, SSH traffic | 🔧 In progress |
-
----
+| ID | Project                   | Skills                                              | Status         |
+| -- | ------------------------- | --------------------------------------------------- | -------------- |
+| 01 | Linux System Monitor      | Python, Linux Monitoring, Processes, System Metrics | ✅ Complete     |
+| 02 | Oracle Cloud VM Hardening | SSH, UFW, Service Auditing, Security Hardening      | ✅ Complete     |
+| 03 | Network Traffic Analysis  | Wireshark, TCP/IP, Packet Analysis, SSH Traffic     | 🔧 In Progress |
 
 ## Environment
 
-| Component | Details |
-|-----------|---------|
-| Cloud | Oracle Cloud Free Tier |
-| OS | Ubuntu 22.04 LTS |
-| Instance | VM.Standard.E2.1.Micro |
-| Tools | Python 3, Wireshark, tcpdump, systemd, OpenSSH |
+| Component        | Details                                             |
+| ---------------- | --------------------------------------------------- |
+| Cloud Provider   | Oracle Cloud Free Tier                              |
+| Operating System | Ubuntu 22.04 LTS                                    |
+| Instance Type    | VM.Standard.E2.1.Micro                              |
+| Tools            | Python 3, Wireshark, tcpdump, OpenSSH, systemd, Git |
 
----
+## Skills Covered
 
-## Learning notes
+### Linux Administration
 
-- [Networking fundamentals](./notes/networking.md)
-- [Linux command reference](./notes/linux_commands.md)
-- [Cloud concepts](./notes/cloud_concepts.md)
+* Service management with systemd
+* User and privilege management
+* System monitoring and troubleshooting
 
----
+### Networking
+
+* TCP/IP fundamentals
+* Port and service analysis
+* Packet capture and traffic inspection
+
+### Security
+
+* Firewall management with UFW
+* SSH hardening
+* Attack surface reduction
+* Security auditing
+
+### Cloud Infrastructure
+
+* Oracle Cloud Infrastructure (OCI)
+* Remote VM administration
+* Cloud security basics
+
+## Learning Notes
+
+* Linux command reference
+* Networking fundamentals
+* Cloud concepts
+* Security concepts and hardening practices
 
 ## Background
 
-B.E. Electrical and Electronics Engineering | GATE qualified
-Research intern, IIT Delhi
-Currently building hands-on cloud and infrastructure skills.
+B.E. in Electrical and Electronics Engineering
+
+* GATE Qualified (Electrical Engineering)
+* Former Research Scholar at IIT Delhi
+* Currently building practical Linux, Cloud, Networking, Security, and DevOps skills through hands-on projects
+
+## Repository Goal
+
+The objective of this repository is to develop practical infrastructure and security skills through project-based learning, while maintaining a public portfolio that demonstrates hands-on experience with real systems and cloud environments.
