@@ -10,8 +10,8 @@ and Security Operations roles.
 
 | # | Project | Skills | Status |
 |---|---------|--------|--------|
-| 01 | [Linux System Monitor](./projects/01-linux-system-monitor/) | Python, systemd, ps, ss, cron | 🔧 In progress |
-| 02 | [Oracle Cloud VM Hardening](./projects/02-oracle-cloud-hardening/) | SSH, UFW, port audit, cloud security | 🔧 In progress |
+| 01 | [Linux System Monitor](./projects/01-linux-system-monitor/) | Python, systemd, ps, ss, cron | completed |
+| 02 | [Oracle Cloud VM Hardening](./projects/02-oracle-cloud-hardening/) | SSH, UFW, port audit, cloud security | completed |
 | 03 | [Network Traffic Analysis](./projects/03-network-traffic-analysis/) | Wireshark, TCP/IP, pcap, SSH traffic | 🔧 In progress |
 
 ---
